@@ -9,11 +9,15 @@ GET(url, write_disk(tf <- tempfile(fileext = ".xls")))
 NZ_2006_Otago <- read_excel(tf, guess_max = 13000)
 
 NZ_2006_Otago <- NZ_2006_Otago %>%
-  mutate_at(vars(MB_num_2006, CAU_num_2006, CAU_name_2006,
-                 TA_num, TA_name,
-                 DHB_num, DHB_name,
-                 Urban_Rural_Desc,
-                 MB_num_2001),
-            as.factor)
+  mutate_at(
+    vars(
+      MB_num_2006, CAU_num_2006, CAU_name_2006,
+      TA_num, TA_name,
+      DHB_num, DHB_name,
+      Urban_Rural_Desc,
+      MB_num_2001
+    ),
+    as.factor
+  )
 
 usethis::use_data(NZ_2006_Otago)
