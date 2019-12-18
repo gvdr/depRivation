@@ -10,7 +10,7 @@
 
 Socioeconomic Deprivation Indexes, the easy, tidy, R way.
 
-For the moment, the only data really available is the New Zealand Socioeconomic Deprivation Index as discussed [here](https://www.otago.ac.nz/wellington/departments/publichealth/research/hirp/otago020194.html).
+For the moment, the only data really available is the New Zealand Socioeconomic Deprivation Indexes at the Area Unit level as discussed [here](https://www.otago.ac.nz/wellington/departments/publichealth/research/hirp/otago020194.html).
 
 Install the `deprivation` package
 
