@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^\.gitlab-ci\.yml$
+^\.travis\.yml$
+^codecov\.yml$
+^\.covrignore$
+^\.github$
