@@ -126,9 +126,10 @@ NZ_AreaUnits_1991 <- NZ_AreaUnits_1991 %>%
   rename(CAU_num = CAU)
 
 NZ_AreaUnits_1991 <- NZ_AreaUnits_1991 %>% mutate(
+  CAU_num = as.numeric(CAU_num),
   CAU_name = NA_character_,
   Value = as.numeric(Value),
-  year = lubridate::ymd(year, truncated = 2L)
+  year = lubridate::ymd(year, truncated = 2L),
 )
 
 #' let's pivot also the other piece of data
@@ -143,8 +144,8 @@ NZ_AreaUnits <- NZ_AreaUnits %>%
 
 #' and we bind everything together
 
-NZ_AreaUnits %>%
+NZ_AreaUnits <- NZ_AreaUnits %>%
   bind_rows(NZ_AreaUnits_1991)
 
 
-usethis::use_data(NZ_AreaUnits)
+usethis::use_data(NZ_AreaUnits, overwrite = TRUE)
